@@ -29,3 +29,4 @@ json_string = json.dumps(estructureJSON, indent = 4, ensure_ascii=False).encode(
 json = json_string.decode()
 archi1=open("resultado.json","w")
 archi1.write(json)
+archi1.close()
