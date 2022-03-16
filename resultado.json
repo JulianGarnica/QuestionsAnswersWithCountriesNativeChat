@@ -1,0 +1,48 @@
+{
+    "¿Cómo puedo buscar algo?": {
+        "type": "goal",
+        "steps": [
+            {
+                "conditions": [
+                    "{{$eq paisSeleccionado 'Colombia'}}"
+                ],
+                "type": "message",
+                "messages": [
+                    "RespuestaColombia"
+                ]
+            },
+            {
+                "conditions": [
+                    "{{$eq paisSeleccionado 'Ecuador'}}"
+                ],
+                "type": "message",
+                "messages": [
+                    "RespuestaEcuador"
+                ]
+            }
+        ]
+    },
+    "¿Te puedo buscar XD?": {
+        "type": "goal",
+        "steps": [
+            {
+                "conditions": [
+                    "{{$eq paisSeleccionado 'Colombia'}}"
+                ],
+                "type": "message",
+                "messages": [
+                    "RespuestaColombia 1"
+                ]
+            },
+            {
+                "conditions": [
+                    "{{$eq paisSeleccionado 'Ecuador'}}"
+                ],
+                "type": "message",
+                "messages": [
+                    "RespuestaEcuador 2"
+                ]
+            }
+        ]
+    }
+}
