@@ -1,7 +1,15 @@
 {
     "¿Cómo puedo buscar algo?": {
         "type": "goal",
+        "display-name": "¿Cómo puedo buscar algo?",
         "steps": [
+            {
+                "conditions": [
+                    "{{$not paisSeleccionado}}"
+                ],
+                "type": "conversation",
+                "conversation": "welcome"
+            },
             {
                 "conditions": [
                     "{{$eq paisSeleccionado 'Colombia'}}"
@@ -19,12 +27,32 @@
                 "messages": [
                     "RespuestaEcuador"
                 ]
+            },
+            {
+                "type": "command",
+                "command": "invalidate-entity respondioPregunta"
+            },
+            {
+                "type": "command",
+                "command": "invalidate-entity calificacionSeleccionada"
+            },
+            {
+                "type": "command",
+                "command": "go-to ¿Respondí tu duda?"
             }
         ]
     },
     "¿Te puedo buscar XD?": {
         "type": "goal",
+        "display-name": "¿Te puedo buscar XD?",
         "steps": [
+            {
+                "conditions": [
+                    "{{$not paisSeleccionado}}"
+                ],
+                "type": "conversation",
+                "conversation": "welcome"
+            },
             {
                 "conditions": [
                     "{{$eq paisSeleccionado 'Colombia'}}"
@@ -42,6 +70,18 @@
                 "messages": [
                     "RespuestaEcuador 2"
                 ]
+            },
+            {
+                "type": "command",
+                "command": "invalidate-entity respondioPregunta"
+            },
+            {
+                "type": "command",
+                "command": "invalidate-entity calificacionSeleccionada"
+            },
+            {
+                "type": "command",
+                "command": "go-to ¿Respondí tu duda?"
             }
         ]
     }
